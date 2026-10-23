@@ -1,0 +1,2067 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: dmoney-transactions.js
+ web dashboard: http://127.0.0.1:5665
+        output: -
+
+     scenarios: (100.00%) 13 scenarios, 160 max VUs, 2m5s max duration (incl. graceful stop):
+              * p1_c1_send_c2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: sendMoney, gracefulStop: 5s)
+              * p1_c2_pay_m1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, gracefulStop: 5s)
+              * p2_a1_deposit_c2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: deposit, startTime: 30s, gracefulStop: 5s)
+              * p2_c1_pay_m1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 30s, gracefulStop: 5s)
+              * p2_c2_send_c1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: sendMoney, startTime: 30s, gracefulStop: 5s)
+              * p3_a1_deposit_c1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: deposit, startTime: 1m0s, gracefulStop: 5s)
+              * p3_a2_deposit_c2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: deposit, startTime: 1m0s, gracefulStop: 5s)
+              * p3_c1_send_c2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: sendMoney, startTime: 1m0s, gracefulStop: 5s)
+              * p3_c2_pay_m2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 1m0s, gracefulStop: 5s)
+              * p4_a1_pay_m1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 1m30s, gracefulStop: 5s)
+              * p4_a2_pay_m2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 1m30s, gracefulStop: 5s)
+              * p4_c1_pay_m1: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 1m30s, gracefulStop: 5s)
+              * p4_c2_pay_m2: 2.00 iterations/s for 30s (maxVUs: 5-20, exec: payment, startTime: 1m30s, gracefulStop: 5s)
+
+
+Run                [ 100% ] setup()
+p1_c1_send_c2      [   0% ]
+p1_c2_pay_m1       [   0% ]
+p2_a1_deposit_c2   [   0% ]
+p2_c1_pay_m1       [   0% ]
+p2_c2_send_c1      [   0% ]
+p3_a1_deposit_c1   [   0% ]
+p3_a2_deposit_c2   [   0% ]
+p3_c1_send_c2      [   0% ]
+p3_c2_pay_m2       [   0% ]
+p4_a1_pay_m1       [   0% ]
+p4_a2_pay_m2       [   0% ]
+p4_c1_pay_m1       [   0% ]
+p4_c2_pay_m2       [   0% ]
+
+running (0m01.9s), 002/040 VUs, 2 complete and 0 interrupted iterations
+p1_c1_send_c2      [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    29.2s     
+p2_c1_pay_m1     • [   0% ] waiting    29.2s     
+p2_c2_send_c1    • [   0% ] waiting    29.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m59.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m59.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m59.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m59.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m29.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m29.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m29.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m29.2s   
+
+running (0m02.9s), 002/040 VUs, 6 complete and 0 interrupted iterations
+p1_c1_send_c2      [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    28.2s     
+p2_c1_pay_m1     • [   0% ] waiting    28.2s     
+p2_c2_send_c1    • [   0% ] waiting    28.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m58.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m58.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m58.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m58.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m28.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m28.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m28.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m28.2s   
+
+running (0m03.9s), 000/040 VUs, 12 complete and 0 interrupted iterations
+p1_c1_send_c2      [   9% ] 00/05 VUs  02.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [   9% ] 00/05 VUs  02.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    27.2s     
+p2_c1_pay_m1     • [   0% ] waiting    27.2s     
+p2_c2_send_c1    • [   0% ] waiting    27.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m57.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m57.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m57.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m57.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m27.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m27.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m27.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m27.2s   
+
+running (0m04.9s), 002/040 VUs, 14 complete and 0 interrupted iterations
+p1_c1_send_c2      [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    26.2s     
+p2_c1_pay_m1     • [   0% ] waiting    26.2s     
+p2_c2_send_c1    • [   0% ] waiting    26.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m56.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m56.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m56.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m56.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m26.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m26.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m26.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m26.2s   
+
+running (0m05.9s), 000/040 VUs, 20 complete and 0 interrupted iterations
+p1_c1_send_c2      [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    25.2s     
+p2_c1_pay_m1     • [   0% ] waiting    25.2s     
+p2_c2_send_c1    • [   0% ] waiting    25.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m55.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m55.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m55.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m55.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m25.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m25.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m25.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m25.2s   
+
+running (0m06.9s), 002/040 VUs, 22 complete and 0 interrupted iterations
+p1_c1_send_c2      [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    24.2s     
+p2_c1_pay_m1     • [   0% ] waiting    24.2s     
+p2_c2_send_c1    • [   0% ] waiting    24.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m54.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m54.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m54.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m54.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m24.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m24.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m24.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m24.2s   
+
+running (0m07.9s), 000/040 VUs, 28 complete and 0 interrupted iterations
+p1_c1_send_c2      [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    23.2s     
+p2_c1_pay_m1     • [   0% ] waiting    23.2s     
+p2_c2_send_c1    • [   0% ] waiting    23.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m53.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m53.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m53.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m53.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m23.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m23.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m23.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m23.2s   
+
+running (0m08.9s), 000/040 VUs, 32 complete and 0 interrupted iterations
+p1_c1_send_c2      [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    22.2s     
+p2_c1_pay_m1     • [   0% ] waiting    22.2s     
+p2_c2_send_c1    • [   0% ] waiting    22.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m52.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m52.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m52.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m52.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m22.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m22.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m22.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m22.2s   
+
+running (0m09.9s), 002/040 VUs, 34 complete and 0 interrupted iterations
+p1_c1_send_c2      [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    21.2s     
+p2_c1_pay_m1     • [   0% ] waiting    21.2s     
+p2_c2_send_c1    • [   0% ] waiting    21.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m51.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m51.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m51.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m51.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m21.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m21.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m21.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m21.2s   
+
+running (0m10.9s), 002/040 VUs, 38 complete and 0 interrupted iterations
+p1_c1_send_c2      [  33% ] 01/05 VUs  09.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  33% ] 01/05 VUs  09.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    20.2s     
+p2_c1_pay_m1     • [   0% ] waiting    20.2s     
+p2_c2_send_c1    • [   0% ] waiting    20.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m50.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m50.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m50.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m50.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m20.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m20.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m20.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m20.2s   
+
+running (0m11.9s), 000/040 VUs, 44 complete and 0 interrupted iterations
+p1_c1_send_c2      [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    19.2s     
+p2_c1_pay_m1     • [   0% ] waiting    19.2s     
+p2_c2_send_c1    • [   0% ] waiting    19.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m49.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m49.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m49.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m49.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m19.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m19.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m19.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m19.2s   
+
+running (0m12.9s), 002/040 VUs, 46 complete and 0 interrupted iterations
+p1_c1_send_c2      [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    18.2s     
+p2_c1_pay_m1     • [   0% ] waiting    18.2s     
+p2_c2_send_c1    • [   0% ] waiting    18.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m48.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m48.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m48.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m48.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m18.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m18.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m18.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m18.2s   
+
+running (0m13.9s), 002/040 VUs, 50 complete and 0 interrupted iterations
+p1_c1_send_c2      [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    17.2s     
+p2_c1_pay_m1     • [   0% ] waiting    17.2s     
+p2_c2_send_c1    • [   0% ] waiting    17.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m47.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m47.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m47.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m47.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m17.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m17.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m17.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m17.2s   
+
+running (0m14.9s), 002/040 VUs, 54 complete and 0 interrupted iterations
+p1_c1_send_c2      [  46% ] 01/05 VUs  13.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  46% ] 01/05 VUs  13.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    16.2s     
+p2_c1_pay_m1     • [   0% ] waiting    16.2s     
+p2_c2_send_c1    • [   0% ] waiting    16.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m46.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m46.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m46.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m46.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m16.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m16.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m16.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m16.2s   
+
+running (0m15.9s), 000/040 VUs, 60 complete and 0 interrupted iterations
+p1_c1_send_c2      [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    15.2s     
+p2_c1_pay_m1     • [   0% ] waiting    15.2s     
+p2_c2_send_c1    • [   0% ] waiting    15.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m45.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m45.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m45.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m45.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m15.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m15.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m15.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m15.2s   
+
+running (0m16.9s), 000/040 VUs, 64 complete and 0 interrupted iterations
+p1_c1_send_c2      [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    14.2s     
+p2_c1_pay_m1     • [   0% ] waiting    14.2s     
+p2_c2_send_c1    • [   0% ] waiting    14.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m44.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m44.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m44.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m44.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m14.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m14.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m14.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m14.2s   
+
+running (0m17.9s), 000/040 VUs, 68 complete and 0 interrupted iterations
+p1_c1_send_c2      [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    13.2s     
+p2_c1_pay_m1     • [   0% ] waiting    13.2s     
+p2_c2_send_c1    • [   0% ] waiting    13.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m43.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m43.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m43.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m43.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m13.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m13.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m13.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m13.2s   
+
+running (0m18.9s), 000/040 VUs, 72 complete and 0 interrupted iterations
+p1_c1_send_c2      [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    12.2s     
+p2_c1_pay_m1     • [   0% ] waiting    12.2s     
+p2_c2_send_c1    • [   0% ] waiting    12.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m42.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m42.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m42.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m42.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m12.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m12.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m12.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m12.2s   
+
+running (0m19.9s), 000/040 VUs, 76 complete and 0 interrupted iterations
+p1_c1_send_c2      [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    11.2s     
+p2_c1_pay_m1     • [   0% ] waiting    11.2s     
+p2_c2_send_c1    • [   0% ] waiting    11.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m41.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m41.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m41.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m41.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m11.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m11.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m11.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m11.2s   
+
+running (0m20.9s), 000/040 VUs, 80 complete and 0 interrupted iterations
+p1_c1_send_c2      [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    10.2s     
+p2_c1_pay_m1     • [   0% ] waiting    10.2s     
+p2_c2_send_c1    • [   0% ] waiting    10.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m40.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m40.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m40.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m40.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m10.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m10.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m10.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m10.2s   
+
+running (0m21.9s), 000/040 VUs, 84 complete and 0 interrupted iterations
+p1_c1_send_c2      [  69% ] 00/05 VUs  20.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  69% ] 00/05 VUs  20.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    09.2s     
+p2_c1_pay_m1     • [   0% ] waiting    09.2s     
+p2_c2_send_c1    • [   0% ] waiting    09.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m39.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m39.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m39.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m39.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m09.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m09.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m09.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m09.2s   
+
+running (0m22.9s), 000/040 VUs, 88 complete and 0 interrupted iterations
+p1_c1_send_c2      [  73% ] 00/05 VUs  21.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  73% ] 00/05 VUs  21.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    08.2s     
+p2_c1_pay_m1     • [   0% ] waiting    08.2s     
+p2_c2_send_c1    • [   0% ] waiting    08.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m38.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m38.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m38.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m38.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m08.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m08.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m08.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m08.2s   
+
+running (0m23.9s), 000/040 VUs, 92 complete and 0 interrupted iterations
+p1_c1_send_c2      [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    07.2s     
+p2_c1_pay_m1     • [   0% ] waiting    07.2s     
+p2_c2_send_c1    • [   0% ] waiting    07.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m37.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m37.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m37.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m37.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m07.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m07.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m07.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m07.2s   
+
+running (0m24.9s), 000/040 VUs, 96 complete and 0 interrupted iterations
+p1_c1_send_c2      [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    06.2s     
+p2_c1_pay_m1     • [   0% ] waiting    06.2s     
+p2_c2_send_c1    • [   0% ] waiting    06.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m36.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m36.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m36.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m36.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m06.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m06.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m06.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m06.2s   
+
+running (0m25.9s), 000/040 VUs, 100 complete and 0 interrupted iterations
+p1_c1_send_c2      [  83% ] 00/05 VUs  24.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  83% ] 00/05 VUs  24.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    05.2s     
+p2_c1_pay_m1     • [   0% ] waiting    05.2s     
+p2_c2_send_c1    • [   0% ] waiting    05.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m35.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m35.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m35.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m35.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m05.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m05.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m05.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m05.2s   
+
+running (0m26.9s), 000/040 VUs, 104 complete and 0 interrupted iterations
+p1_c1_send_c2      [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    04.2s     
+p2_c1_pay_m1     • [   0% ] waiting    04.2s     
+p2_c2_send_c1    • [   0% ] waiting    04.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m34.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m34.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m34.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m34.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m04.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m04.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m04.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m04.2s   
+
+running (0m27.9s), 000/040 VUs, 108 complete and 0 interrupted iterations
+p1_c1_send_c2      [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    03.2s     
+p2_c1_pay_m1     • [   0% ] waiting    03.2s     
+p2_c2_send_c1    • [   0% ] waiting    03.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m33.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m33.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m33.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m33.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m03.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m03.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m03.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m03.2s   
+
+running (0m28.9s), 002/040 VUs, 110 complete and 0 interrupted iterations
+p1_c1_send_c2      [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    02.2s     
+p2_c1_pay_m1     • [   0% ] waiting    02.2s     
+p2_c2_send_c1    • [   0% ] waiting    02.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m32.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m32.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m32.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m32.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m02.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m02.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m02.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m02.2s   
+
+running (0m29.9s), 000/040 VUs, 116 complete and 0 interrupted iterations
+p1_c1_send_c2      [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    01.2s     
+p2_c1_pay_m1     • [   0% ] waiting    01.2s     
+p2_c2_send_c1    • [   0% ] waiting    01.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m31.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m31.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m31.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m31.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m01.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m01.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m01.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m01.2s   
+
+running (0m30.9s), 000/040 VUs, 120 complete and 0 interrupted iterations
+p1_c1_send_c2      [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p1_c2_pay_m1       [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p2_a1_deposit_c2 • [   0% ] waiting    00.2s     
+p2_c1_pay_m1     • [   0% ] waiting    00.2s     
+p2_c2_send_c1    • [   0% ] waiting    00.2s     
+p3_a1_deposit_c1 • [   0% ] waiting    0m30.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m30.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m30.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m30.2s   
+p4_a1_pay_m1     • [   0% ] waiting    1m00.2s   
+p4_a2_pay_m2     • [   0% ] waiting    1m00.2s   
+p4_c1_pay_m1     • [   0% ] waiting    1m00.2s   
+p4_c2_pay_m2     • [   0% ] waiting    1m00.2s   
+time="2026-10-24T01:01:12+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m31.9s), 003/040 VUs, 123 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p2_c2_send_c1      [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m29.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m29.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m29.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m29.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m59.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m59.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m59.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m59.2s   
+time="2026-10-24T01:01:13+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m32.9s), 003/040 VUs, 129 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p2_c2_send_c1      [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m28.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m28.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m28.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m28.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m58.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m58.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m58.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m58.2s   
+time="2026-10-24T01:01:14+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:14+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m33.9s), 003/040 VUs, 135 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p2_c2_send_c1      [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m27.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m27.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m27.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m27.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m57.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m57.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m57.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m57.2s   
+time="2026-10-24T01:01:14+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m34.9s), 003/040 VUs, 141 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m26.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m26.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m26.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m26.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m56.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m56.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m56.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m56.2s   
+time="2026-10-24T01:01:16+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:16+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:16+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:16+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m35.9s), 001/040 VUs, 149 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  16% ] 01/05 VUs  04.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m25.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m25.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m25.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m25.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m55.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m55.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m55.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m55.2s   
+time="2026-10-24T01:01:17+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m36.9s), 001/040 VUs, 155 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m24.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m24.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m24.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m24.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m54.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m54.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m54.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m54.2s   
+time="2026-10-24T01:01:18+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m37.9s), 000/040 VUs, 162 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m23.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m23.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m23.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m23.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m53.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m53.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m53.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m53.2s   
+time="2026-10-24T01:01:19+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m38.9s), 001/040 VUs, 167 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m22.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m22.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m22.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m22.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m52.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m52.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m52.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m52.2s   
+
+running (0m39.9s), 002/040 VUs, 172 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  29% ] 00/05 VUs  08.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m21.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m21.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m21.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m21.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m51.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m51.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m51.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m51.2s   
+time="2026-10-24T01:01:21+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m40.9s), 001/040 VUs, 179 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  33% ] 01/05 VUs  09.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m20.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m20.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m20.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m20.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m50.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m50.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m50.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m50.2s   
+time="2026-10-24T01:01:22+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:22+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m41.9s), 001/040 VUs, 185 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  36% ] 01/05 VUs  10.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m19.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m19.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m19.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m19.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m49.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m49.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m49.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m49.2s   
+time="2026-10-24T01:01:23+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m42.9s), 001/040 VUs, 191 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  39% ] 00/05 VUs  11.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  39% ] 00/05 VUs  11.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m18.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m18.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m18.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m18.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m48.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m48.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m48.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m48.2s   
+time="2026-10-24T01:01:24+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:24+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m43.9s), 001/040 VUs, 197 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  43% ] 00/05 VUs  12.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  43% ] 00/05 VUs  12.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m17.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m17.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m17.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m17.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m47.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m47.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m47.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m47.2s   
+time="2026-10-24T01:01:25+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m44.9s), 000/040 VUs, 204 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m16.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m16.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m16.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m16.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m46.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m46.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m46.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m46.2s   
+time="2026-10-24T01:01:26+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:26+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:26+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:26+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m45.9s), 001/040 VUs, 209 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m15.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m15.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m15.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m15.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m45.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m45.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m45.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m45.2s   
+
+running (0m46.9s), 001/040 VUs, 215 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  53% ] 01/05 VUs  15.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m14.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m14.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m14.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m14.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m44.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m44.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m44.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m44.2s   
+
+running (0m47.9s), 001/040 VUs, 221 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  56% ] 01/05 VUs  16.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m13.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m13.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m13.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m13.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m43.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m43.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m43.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m43.2s   
+time="2026-10-24T01:01:29+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:29+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m48.9s), 001/040 VUs, 227 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  59% ] 01/05 VUs  17.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m12.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m12.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m12.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m12.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m42.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m42.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m42.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m42.2s   
+time="2026-10-24T01:01:30+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:30+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m49.9s), 002/040 VUs, 232 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m11.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m11.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m11.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m11.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m41.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m41.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m41.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m41.2s   
+time="2026-10-24T01:01:31+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:31+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m50.9s), 001/040 VUs, 239 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  66% ] 01/05 VUs  19.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m10.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m10.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m10.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m10.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m40.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m40.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m40.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m40.2s   
+
+running (0m51.9s), 003/040 VUs, 243 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m09.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m09.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m09.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m09.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m39.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m39.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m39.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m39.2s   
+
+running (0m52.9s), 003/040 VUs, 249 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m08.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m08.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m08.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m08.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m38.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m38.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m38.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m38.2s   
+time="2026-10-24T01:01:34+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:34+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:34+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m53.9s), 001/040 VUs, 257 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  76% ] 01/05 VUs  22.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m07.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m07.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m07.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m07.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m37.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m37.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m37.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m37.2s   
+time="2026-10-24T01:01:35+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m54.9s), 000/040 VUs, 264 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m06.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m06.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m06.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m06.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m36.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m36.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m36.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m36.2s   
+time="2026-10-24T01:01:36+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:36+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:36+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m55.9s), 001/040 VUs, 269 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  83% ] 00/05 VUs  24.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  83% ] 00/05 VUs  24.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m05.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m05.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m05.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m05.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m35.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m35.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m35.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m35.2s   
+
+running (0m56.9s), 001/040 VUs, 275 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  86% ] 01/05 VUs  25.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m04.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m04.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m04.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m04.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m34.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m34.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m34.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m34.2s   
+time="2026-10-24T01:01:38+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m57.9s), 001/040 VUs, 281 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  89% ] 01/05 VUs  26.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m03.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m03.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m03.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m03.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m33.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m33.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m33.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m33.2s   
+time="2026-10-24T01:01:39+06:00" level=warning msg="sendmoney customer2->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m58.9s), 003/040 VUs, 285 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m02.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m02.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m02.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m02.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m32.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m32.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m32.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m32.2s   
+time="2026-10-24T01:01:40+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (0m59.9s), 001/040 VUs, 293 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  96% ] 01/05 VUs  28.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m01.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m01.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m01.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m01.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m31.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m31.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m31.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m31.2s   
+time="2026-10-24T01:01:41+06:00" level=warning msg="deposit agent1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m00.9s), 003/040 VUs, 297 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2   [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p2_c1_pay_m1       [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p2_c2_send_c1      [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p3_a1_deposit_c1 • [   0% ] waiting    0m00.2s   
+p3_a2_deposit_c2 • [   0% ] waiting    0m00.2s   
+p3_c1_send_c2    • [   0% ] waiting    0m00.2s   
+p3_c2_pay_m2     • [   0% ] waiting    0m00.2s   
+p4_a1_pay_m1     • [   0% ] waiting    0m30.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m30.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m30.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m30.2s   
+time="2026-10-24T01:01:42+06:00" level=warning msg="payment customer1->merchant1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:42+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:42+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m01.9s), 002/040 VUs, 309 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p3_c1_send_c2      [   3% ] 00/05 VUs  00.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [   3% ] 00/05 VUs  00.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m29.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m29.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m29.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m29.2s   
+time="2026-10-24T01:01:42+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:43+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:43+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:43+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:43+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m02.9s), 001/040 VUs, 318 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [   6% ] 00/05 VUs  01.8s/30s  2.00 iters/s
+p3_c1_send_c2      [   6% ] 00/05 VUs  01.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [   6% ] 00/05 VUs  01.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m28.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m28.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m28.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m28.2s   
+time="2026-10-24T01:01:44+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:44+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:44+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:44+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m03.9s), 002/040 VUs, 325 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [   9% ] 00/05 VUs  02.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p3_c1_send_c2      [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [   9% ] 00/05 VUs  02.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m27.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m27.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m27.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m27.2s   
+time="2026-10-24T01:01:45+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:45+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:45+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:45+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:45+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:45+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m04.9s), 001/040 VUs, 334 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  13% ] 00/05 VUs  03.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  13% ] 00/05 VUs  03.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  13% ] 00/05 VUs  03.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m26.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m26.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m26.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m26.2s   
+time="2026-10-24T01:01:46+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:46+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:46+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:46+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:46+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m05.9s), 001/040 VUs, 342 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  16% ] 01/05 VUs  04.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m25.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m25.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m25.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m25.2s   
+time="2026-10-24T01:01:47+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:47+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:47+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:47+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m06.9s), 001/040 VUs, 350 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m24.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m24.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m24.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m24.2s   
+time="2026-10-24T01:01:48+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:48+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:48+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m07.9s), 003/040 VUs, 356 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  23% ] 01/05 VUs  06.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  23% ] 01/05 VUs  06.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  23% ] 01/05 VUs  06.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m23.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m23.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m23.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m23.2s   
+time="2026-10-24T01:01:49+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:49+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m08.9s), 002/040 VUs, 365 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m22.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m22.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m22.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m22.2s   
+time="2026-10-24T01:01:50+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:50+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:50+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:50+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m09.9s), 002/040 VUs, 373 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  29% ] 00/05 VUs  08.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  29% ] 00/05 VUs  08.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m21.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m21.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m21.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m21.2s   
+time="2026-10-24T01:01:51+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:51+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:51+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:51+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:51+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:51+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m10.9s), 001/040 VUs, 382 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  33% ] 01/05 VUs  09.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m20.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m20.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m20.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m20.2s   
+time="2026-10-24T01:01:52+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:52+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m11.9s), 002/040 VUs, 389 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  36% ] 01/05 VUs  10.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  36% ] 01/05 VUs  10.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m19.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m19.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m19.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m19.2s   
+time="2026-10-24T01:01:53+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:53+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:53+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m12.9s), 003/040 VUs, 396 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  39% ] 00/05 VUs  11.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m18.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m18.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m18.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m18.2s   
+time="2026-10-24T01:01:54+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m13.9s), 003/040 VUs, 404 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  43% ] 00/05 VUs  12.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m17.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m17.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m17.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m17.2s   
+time="2026-10-24T01:01:55+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:55+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:55+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:55+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:55+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m14.9s), 001/040 VUs, 414 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  46% ] 01/05 VUs  13.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m16.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m16.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m16.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m16.2s   
+time="2026-10-24T01:01:56+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:56+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:56+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:56+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m15.9s), 003/040 VUs, 420 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m15.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m15.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m15.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m15.2s   
+time="2026-10-24T01:01:57+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:57+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:57+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m16.9s), 002/040 VUs, 429 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  53% ] 01/05 VUs  15.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  53% ] 01/05 VUs  15.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m14.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m14.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m14.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m14.2s   
+time="2026-10-24T01:01:58+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:58+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:58+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:58+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m17.9s), 001/040 VUs, 438 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  56% ] 01/05 VUs  16.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m13.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m13.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m13.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m13.2s   
+time="2026-10-24T01:01:59+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:59+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:01:59+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m18.9s), 002/040 VUs, 445 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  59% ] 01/05 VUs  17.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  59% ] 01/05 VUs  17.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m12.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m12.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m12.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m12.2s   
+
+running (1m19.9s), 003/040 VUs, 452 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m11.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m11.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m11.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m11.2s   
+time="2026-10-24T01:02:00+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m20.9s), 007/040 VUs, 456 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  66% ] 02/05 VUs  19.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  66% ] 01/05 VUs  19.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  66% ] 02/05 VUs  19.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  66% ] 02/05 VUs  19.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m10.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m10.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m10.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m10.2s   
+
+running (1m21.9s), 007/040 VUs, 464 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  69% ] 02/05 VUs  20.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  69% ] 02/05 VUs  20.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  69% ] 02/05 VUs  20.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m09.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m09.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m09.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m09.2s   
+time="2026-10-24T01:02:03+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m22.9s), 004/040 VUs, 475 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m08.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m08.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m08.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m08.2s   
+time="2026-10-24T01:02:04+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:04+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:04+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:04+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m23.9s), 002/040 VUs, 485 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  76% ] 01/05 VUs  22.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  76% ] 01/05 VUs  22.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m07.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m07.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m07.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m07.2s   
+time="2026-10-24T01:02:05+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:05+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m24.9s), 002/040 VUs, 493 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  79% ] 01/05 VUs  23.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  79% ] 01/05 VUs  23.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m06.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m06.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m06.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m06.2s   
+
+running (1m25.9s), 004/040 VUs, 499 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m05.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m05.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m05.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m05.2s   
+time="2026-10-24T01:02:07+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:07+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:07+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:07+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:07+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:07+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m26.9s), 001/040 VUs, 510 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  86% ] 01/05 VUs  25.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m04.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m04.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m04.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m04.2s   
+time="2026-10-24T01:02:08+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:08+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:08+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:08+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:08+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m27.9s), 002/040 VUs, 517 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  89% ] 01/05 VUs  26.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  89% ] 01/05 VUs  26.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m03.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m03.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m03.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m03.2s   
+time="2026-10-24T01:02:08+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:09+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:09+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:09+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m28.9s), 003/040 VUs, 524 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  93% ] 00/05 VUs  27.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m02.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m02.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m02.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m02.2s   
+time="2026-10-24T01:02:10+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:10+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:10+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:10+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:10+06:00" level=warning msg="deposit agent2->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m29.9s), 002/040 VUs, 533 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  96% ] 01/05 VUs  28.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  96% ] 01/05 VUs  28.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m01.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m01.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m01.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m01.2s   
+time="2026-10-24T01:02:11+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:11+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:11+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:11+06:00" level=warning msg="payment customer2->merchant2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:11+06:00" level=warning msg="sendmoney customer1->customer2 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+time="2026-10-24T01:02:11+06:00" level=warning msg="deposit agent1->customer1 failed: 500 {\"message\":\"Internal server error\",\"error\":\"Deadlock found when trying to get lock; try restarting transaction\"}" source=console
+
+running (1m30.9s), 001/040 VUs, 542 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1   [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p3_a2_deposit_c2   [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p3_c1_send_c2      [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p3_c2_pay_m2       [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p4_a1_pay_m1     • [   0% ] waiting    0m00.2s   
+p4_a2_pay_m2     • [   0% ] waiting    0m00.2s   
+p4_c1_pay_m1     • [   0% ] waiting    0m00.2s   
+p4_c2_pay_m2     • [   0% ] waiting    0m00.2s   
+
+running (1m31.9s), 003/040 VUs, 549 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [   3% ] 00/05 VUs  00.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [   3% ] 01/05 VUs  00.8s/30s  2.00 iters/s
+
+running (1m32.9s), 003/040 VUs, 557 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [   6% ] 00/05 VUs  01.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [   6% ] 01/05 VUs  01.8s/30s  2.00 iters/s
+
+running (1m33.9s), 004/040 VUs, 564 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [   9% ] 01/05 VUs  02.8s/30s  2.00 iters/s
+
+running (1m34.9s), 004/040 VUs, 572 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  13% ] 01/05 VUs  03.8s/30s  2.00 iters/s
+
+running (1m35.9s), 001/040 VUs, 583 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  16% ] 01/05 VUs  04.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  16% ] 00/05 VUs  04.8s/30s  2.00 iters/s
+
+running (1m36.9s), 002/040 VUs, 590 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  19% ] 00/05 VUs  05.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  19% ] 01/05 VUs  05.8s/30s  2.00 iters/s
+
+running (1m37.9s), 002/040 VUs, 598 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  23% ] 01/05 VUs  06.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  23% ] 00/05 VUs  06.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  23% ] 01/05 VUs  06.8s/30s  2.00 iters/s
+
+running (1m38.9s), 003/040 VUs, 605 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  26% ] 00/05 VUs  07.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  26% ] 01/05 VUs  07.8s/30s  2.00 iters/s
+
+running (1m39.9s), 002/040 VUs, 614 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  29% ] 00/05 VUs  08.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  29% ] 00/05 VUs  08.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  29% ] 01/05 VUs  08.8s/30s  2.00 iters/s
+
+running (1m40.9s), 001/040 VUs, 623 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  33% ] 01/05 VUs  09.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  33% ] 00/05 VUs  09.8s/30s  2.00 iters/s
+
+running (1m41.9s), 001/040 VUs, 631 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  36% ] 00/05 VUs  10.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  36% ] 01/05 VUs  10.8s/30s  2.00 iters/s
+
+running (1m42.9s), 002/040 VUs, 638 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  39% ] 00/05 VUs  11.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  39% ] 01/05 VUs  11.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  39% ] 00/05 VUs  11.8s/30s  2.00 iters/s
+
+running (1m43.9s), 002/040 VUs, 646 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  43% ] 00/05 VUs  12.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  43% ] 00/05 VUs  12.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  43% ] 01/05 VUs  12.8s/30s  2.00 iters/s
+
+running (1m44.9s), 002/040 VUs, 654 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  46% ] 01/05 VUs  13.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  46% ] 00/05 VUs  13.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  46% ] 01/05 VUs  13.8s/30s  2.00 iters/s
+
+running (1m45.9s), 002/040 VUs, 662 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  49% ] 01/05 VUs  14.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  49% ] 00/05 VUs  14.8s/30s  2.00 iters/s
+
+running (1m46.9s), 002/040 VUs, 670 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  53% ] 01/05 VUs  15.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  53% ] 00/05 VUs  15.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  53% ] 01/05 VUs  15.8s/30s  2.00 iters/s
+
+running (1m47.9s), 002/040 VUs, 678 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  56% ] 01/05 VUs  16.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  56% ] 01/05 VUs  16.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  56% ] 00/05 VUs  16.8s/30s  2.00 iters/s
+
+running (1m48.9s), 002/040 VUs, 686 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  59% ] 01/05 VUs  17.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  59% ] 00/05 VUs  17.8s/30s  2.00 iters/s
+
+running (1m49.9s), 001/040 VUs, 695 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  63% ] 00/05 VUs  18.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  63% ] 01/05 VUs  18.8s/30s  2.00 iters/s
+
+running (1m50.9s), 002/040 VUs, 702 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  66% ] 01/05 VUs  19.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  66% ] 00/05 VUs  19.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  66% ] 01/05 VUs  19.8s/30s  2.00 iters/s
+
+running (1m51.9s), 002/040 VUs, 710 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  69% ] 00/05 VUs  20.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  69% ] 01/05 VUs  20.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  69% ] 00/05 VUs  20.8s/30s  2.00 iters/s
+
+running (1m52.9s), 002/040 VUs, 718 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  73% ] 00/05 VUs  21.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  73% ] 00/05 VUs  21.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  73% ] 01/05 VUs  21.8s/30s  2.00 iters/s
+
+running (1m53.9s), 002/040 VUs, 726 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  76% ] 01/05 VUs  22.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  76% ] 00/05 VUs  22.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  76% ] 01/05 VUs  22.8s/30s  2.00 iters/s
+
+running (1m54.9s), 002/040 VUs, 734 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  79% ] 01/05 VUs  23.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  79% ] 01/05 VUs  23.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  79% ] 00/05 VUs  23.8s/30s  2.00 iters/s
+
+running (1m55.9s), 003/040 VUs, 741 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  83% ] 00/05 VUs  24.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  83% ] 01/05 VUs  24.8s/30s  2.00 iters/s
+
+running (1m56.9s), 002/040 VUs, 750 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  86% ] 01/05 VUs  25.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  86% ] 01/05 VUs  25.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  86% ] 00/05 VUs  25.8s/30s  2.00 iters/s
+
+running (1m57.9s), 002/040 VUs, 758 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  89% ] 01/05 VUs  26.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  89% ] 01/05 VUs  26.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  89% ] 00/05 VUs  26.8s/30s  2.00 iters/s
+
+running (1m58.9s), 001/040 VUs, 767 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  93% ] 01/05 VUs  27.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  93% ] 00/05 VUs  27.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  93% ] 00/05 VUs  27.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  93% ] 00/05 VUs  27.8s/30s  2.00 iters/s
+
+running (1m59.9s), 002/040 VUs, 774 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  96% ] 00/05 VUs  28.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  96% ] 01/05 VUs  28.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  96% ] 01/05 VUs  28.8s/30s  2.00 iters/s
+
+running (2m00.9s), 003/040 VUs, 781 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s        2.00 iters/s
+p4_a1_pay_m1       [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p4_a2_pay_m2       [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+p4_c1_pay_m1       [  99% ] 00/05 VUs  29.8s/30s  2.00 iters/s
+p4_c2_pay_m2       [  99% ] 01/05 VUs  29.8s/30s  2.00 iters/s
+time="2026-10-24T01:02:42+06:00" level=info msg="[k6-reporter v3.0.4] Generating HTML summary report, with theme: default" source=console
+[31m     ✗ sendmoney: status is 201
+      ↳  79% — ✓ 145 / ✗ 37[0m
+[31m     ✗ sendmoney: transaction is successful
+      ↳  79% — ✓ 145 / ✗ 37[0m
+[31m     ✗ sendmoney: trnxId is returned
+      ↳  79% — ✓ 145 / ✗ 37[0m
+[31m     ✗ sendmoney: success message is correct
+      ↳  79% — ✓ 145 / ✗ 37[0m
+[31m     ✗ payment: status is 201
+      ↳  87% — ✓ 371 / ✗ 54[0m
+[31m     ✗ payment: transaction is successful
+      ↳  87% — ✓ 371 / ✗ 54[0m
+[31m     ✗ payment: trnxId is returned
+      ↳  87% — ✓ 371 / ✗ 54[0m
+[31m     ✗ payment: success message is correct
+      ↳  87% — ✓ 371 / ✗ 54[0m
+[31m     ✗ deposit: status is 201
+      ↳  72% — ✓ 131 / ✗ 50[0m
+[31m     ✗ deposit: transaction is successful
+      ↳  72% — ✓ 131 / ✗ 50[0m
+[31m     ✗ deposit: trnxId is returned
+      ↳  72% — ✓ 131 / ✗ 50[0m
+[31m     ✗ deposit: success message is correct
+      ↳  72% — ✓ 131 / ✗ 50[0m
+
+     █ setup
+
+[32m       ✓ login OTP sent[0m
+[32m       ✓ verify OTP status is 200[0m
+[32m       ✓ token is returned[0m
+
+     checks[2m.........................:[0m [36m82.20%[0m [36;2m✓ 2606[0m     [36;2m✗ 564[0m 
+     [31m✗[0m { api:deposit }[2m..............:[0m [36m72.37%[0m [36;2m✓ 524[0m      [36;2m✗ 200[0m 
+     [31m✗[0m { api:payment }[2m..............:[0m [36m87.29%[0m [36;2m✓ 1484[0m     [36;2m✗ 216[0m 
+     [31m✗[0m { api:sendmoney }[2m............:[0m [36m79.67%[0m [36;2m✓ 580[0m      [36;2m✗ 148[0m 
+     [31m✗[0m { type:transaction }[2m.........:[0m [36m82.10%[0m [36;2m✓ 2588[0m     [36;2m✗ 564[0m 
+     data_received[2m..................:[0m [36m642 kB[0m [36;2m5.3 kB/s[0m
+     data_sent[2m......................:[0m [36m196 kB[0m [36;2m1.6 kB/s[0m
+     http_req_blocked[2m...............:[0m avg=[36m2.22ms[0m   min=[36m0s[0m       med=[36m0s[0m       max=[36m165.86ms[0m p(90)=[36m0s[0m       p(95)=[36m18.21ms[0m 
+     http_req_connecting[2m............:[0m avg=[36m659.63µs[0m min=[36m0s[0m       med=[36m0s[0m       max=[36m110.33ms[0m p(90)=[36m0s[0m       p(95)=[36m1.15ms[0m  
+   [32m✓[0m http_req_duration[2m..............:[0m avg=[36m263.39ms[0m min=[36m68.09ms[0m  med=[36m246.08ms[0m max=[36m929.76ms[0m p(90)=[36m352.28ms[0m p(95)=[36m419.47ms[0m
+     [32m✓[0m { api:deposit,phase:p2 }[2m.....:[0m avg=[36m283.8ms[0m  min=[36m195.06ms[0m med=[36m287.04ms[0m max=[36m416.26ms[0m p(90)=[36m323.78ms[0m p(95)=[36m373.47ms[0m
+     [32m✓[0m { api:deposit,phase:p3 }[2m.....:[0m avg=[36m337.55ms[0m min=[36m159.03ms[0m med=[36m295.26ms[0m max=[36m885.26ms[0m p(90)=[36m492.86ms[0m p(95)=[36m621.88ms[0m
+     [32m✓[0m { api:deposit }[2m..............:[0m avg=[36m319.43ms[0m min=[36m159.03ms[0m med=[36m289.11ms[0m max=[36m885.26ms[0m p(90)=[36m439.05ms[0m p(95)=[36m549.76ms[0m
+     [32m✓[0m { api:payment,phase:p1 }[2m.....:[0m avg=[36m224.54ms[0m min=[36m153.36ms[0m med=[36m201.92ms[0m max=[36m563.63ms[0m p(90)=[36m303.47ms[0m p(95)=[36m321.71ms[0m
+     [32m✓[0m { api:payment,phase:p2 }[2m.....:[0m avg=[36m237.95ms[0m min=[36m156.71ms[0m med=[36m235.96ms[0m max=[36m323.23ms[0m p(90)=[36m295.11ms[0m p(95)=[36m305.03ms[0m
+     [32m✓[0m { api:payment,phase:p3 }[2m.....:[0m avg=[36m282.46ms[0m min=[36m153.35ms[0m med=[36m232.28ms[0m max=[36m909.35ms[0m p(90)=[36m444.66ms[0m p(95)=[36m556.45ms[0m
+     [32m✓[0m { api:payment,phase:p4 }[2m.....:[0m avg=[36m254.6ms[0m  min=[36m167.52ms[0m med=[36m249.62ms[0m max=[36m446.56ms[0m p(90)=[36m325.04ms[0m p(95)=[36m354.56ms[0m
+     [32m✓[0m { api:payment }[2m..............:[0m avg=[36m251.9ms[0m  min=[36m153.35ms[0m med=[36m240.26ms[0m max=[36m909.35ms[0m p(90)=[36m321.45ms[0m p(95)=[36m355.21ms[0m
+     [32m✓[0m { api:sendmoney,phase:p1 }[2m...:[0m avg=[36m224.52ms[0m min=[36m146.41ms[0m med=[36m202.11ms[0m max=[36m572.47ms[0m p(90)=[36m305.51ms[0m p(95)=[36m321.34ms[0m
+     [32m✓[0m { api:sendmoney,phase:p2 }[2m...:[0m avg=[36m227.23ms[0m min=[36m156.76ms[0m med=[36m214.04ms[0m max=[36m394.59ms[0m p(90)=[36m290.71ms[0m p(95)=[36m299.43ms[0m
+     [32m✓[0m { api:sendmoney,phase:p3 }[2m...:[0m avg=[36m285.6ms[0m  min=[36m155.34ms[0m med=[36m230.48ms[0m max=[36m929.76ms[0m p(90)=[36m374.07ms[0m p(95)=[36m831.16ms[0m
+     [32m✓[0m { api:sendmoney }[2m............:[0m avg=[36m245.9ms[0m  min=[36m146.41ms[0m med=[36m214.47ms[0m max=[36m929.76ms[0m p(90)=[36m320.78ms[0m p(95)=[36m374.01ms[0m
+       { expected_response:true }[2m...:[0m avg=[36m271.22ms[0m min=[36m68.09ms[0m  med=[36m254.43ms[0m max=[36m929.76ms[0m p(90)=[36m366.42ms[0m p(95)=[36m439.31ms[0m
+   [31m✗[0m http_req_failed[2m................:[0m [36m17.62%[0m [36;2m✓ 141[0m      [36;2m✗ 659[0m 
+     [31m✗[0m { api:deposit }[2m..............:[0m [36m27.62%[0m [36;2m✓ 50[0m       [36;2m✗ 131[0m 
+     [31m✗[0m { api:payment }[2m..............:[0m [36m12.70%[0m [36;2m✓ 54[0m       [36;2m✗ 371[0m 
+     [31m✗[0m { api:sendmoney }[2m............:[0m [36m20.32%[0m [36;2m✓ 37[0m       [36;2m✗ 145[0m 
+     http_req_receiving[2m.............:[0m avg=[36m2.14ms[0m   min=[36m0s[0m       med=[36m398.8µs[0m  max=[36m22.33ms[0m  p(90)=[36m8.4ms[0m    p(95)=[36m11.99ms[0m 
+     http_req_sending[2m...............:[0m avg=[36m559.61µs[0m min=[36m0s[0m       med=[36m552.6µs[0m  max=[36m1.79ms[0m   p(90)=[36m1.12ms[0m   p(95)=[36m1.29ms[0m  
+     http_req_tls_handshaking[2m.......:[0m avg=[36m1.53ms[0m   min=[36m0s[0m       med=[36m0s[0m       max=[36m55ms[0m     p(90)=[36m0s[0m       p(95)=[36m14.81ms[0m 
+     http_req_waiting[2m...............:[0m avg=[36m260.69ms[0m min=[36m57.37ms[0m  med=[36m242.71ms[0m max=[36m926.18ms[0m p(90)=[36m351.37ms[0m p(95)=[36m416.49ms[0m
+     http_reqs[2m......................:[0m [36m800[0m    [36;2m6.588136/s[0m
+     iteration_duration[2m.............:[0m avg=[36m268.99ms[0m min=[36m147.73ms[0m med=[36m250.04ms[0m max=[36m930.56ms[0m p(90)=[36m355.43ms[0m p(95)=[36m436.56ms[0m
+     iterations[2m.....................:[0m [36m788[0m    [36;2m6.489314/s[0m
+     vus[2m............................:[0m [36m2[0m      [36;2mmin=0[0m      [36;2mmax=7[0m 
+     vus_max[2m........................:[0m [36m40[0m     [36;2mmin=40[0m     [36;2mmax=40[0m
+running (2m01.4s), 000/040 VUs, 788 complete and 0 interrupted iterations
+p1_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p1_c2_pay_m1     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p2_a1_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p2_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p2_c2_send_c1    ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p3_a1_deposit_c1 ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p3_a2_deposit_c2 ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p3_c1_send_c2    ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p3_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p4_a1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p4_a2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p4_c1_pay_m1     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+p4_c2_pay_m2     ✓ [ 100% ] 00/05 VUs  30s  2.00 iters/s
+time="2026-10-24T01:02:42+06:00" level=error msg="thresholds on metrics 'checks{api:deposit}, checks{api:payment}, checks{api:sendmoney}, checks{type:transaction}, http_req_failed, http_req_failed{api:deposit}, http_req_failed{api:payment}, http_req_failed{api:sendmoney}' have been crossed"

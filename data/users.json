@@ -1,0 +1,44 @@
+{
+  "merchant1": {
+    "phone_number": "01819942274",
+    "role": "Merchant",
+    "email": "k6.dmoney.loadtest+merchant101819942274@gmail.com",
+    "id": 106270,
+    "password": "1234"
+  },
+  "merchant2": {
+    "id": 106271,
+    "password": "1234",
+    "phone_number": "01819942275",
+    "role": "Merchant",
+    "email": "k6.dmoney.loadtest+merchant201819942275@gmail.com"
+  },
+  "agent1": {
+    "role": "Agent",
+    "email": "k6.dmoney.loadtest+agent101819942270@gmail.com",
+    "id": 106266,
+    "password": "1234",
+    "phone_number": "01819942270"
+  },
+  "agent2": {
+    "email": "k6.dmoney.loadtest+agent201819942271@gmail.com",
+    "id": 106267,
+    "password": "1234",
+    "phone_number": "01819942271",
+    "role": "Agent"
+  },
+  "customer1": {
+    "id": 106268,
+    "password": "1234",
+    "phone_number": "01819942272",
+    "role": "Customer",
+    "email": "k6.dmoney.loadtest+customer101819942272@gmail.com"
+  },
+  "customer2": {
+    "role": "Customer",
+    "email": "k6.dmoney.loadtest+customer201819942273@gmail.com",
+    "id": 106269,
+    "password": "1234",
+    "phone_number": "01819942273"
+  }
+}
